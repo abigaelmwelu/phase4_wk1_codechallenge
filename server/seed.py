@@ -2,12 +2,11 @@ from app import app, db, Restaurant, Pizza, RestaurantPizza
 
 def create_sample_data():
     with app.app_context():
-        Pizza.query.delete()
         Restaurant.query.delete()
         db.create_all()
 
-        restaurant1 = Restaurant(name="Pizza Palac", address="123 Main St")
-        restaurant2 = Restaurant(name="Pasta Hous", address="456 Elm St")
+        restaurant1 = Restaurant(name="munch", address="123 westlands St")
+        restaurant2 = Restaurant(name="pizza inn ", address="456 ngong road St")
 
    
         pizza1 = Pizza(name="Margherita", ingredients="Tomato, Mozzarella, Basil")

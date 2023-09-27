@@ -15,6 +15,9 @@ db.init_app(app)
 
 api = Api(app)
 
+@app.route('/')
+def index():
+    return 'Abigael'
 
 class Restaurants(Resource):
     def get(self):
